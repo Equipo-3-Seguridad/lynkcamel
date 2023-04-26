@@ -36,3 +36,15 @@ Route::get('/politica-uso', function () {
 Route::get('/aviso-privacidad', function () {
     return view('inicio.aprivacidad');
 });
+
+Route::get('/error-400', function () {
+    abort(400, 'Bad request');
+});
+
+Route::get('/error-404', function () {
+    abort(404, 'Not found');
+});
+
+Route::get('/error-500', function () {
+    abort(500, 'Internal server error');
+}); 

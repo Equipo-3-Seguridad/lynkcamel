@@ -1,7 +1,18 @@
 <!--Se llama a la plantilla principal ya creada-->
 @extends('plantillas.portada')
 
+@section('titulo')
+<title>Conócenos</title>
+@stop
+
 @section('contenidoPrincipal')
+<!--Breadcrumb-->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li id="bread1" class="breadcrumb-item text-dark"><a href="/"><i class="fas fa-home"></i> Inicio</a></li>
+        <li id="bread2" class="breadcrumb-item active text-dark" aria-current="page">Conócenos</li>
+    </ol>
+</nav>
 <div class="">
     <h3 class="text-dark fw-bold m">Misión</h3>
     <p>Somos una empresa que permite a los usuarios encontrar empleo de manera segura y confiable, y a los empleadores y empresas contar con futuros empleados con capacidad para desempeñar un buen trabajo. </p>
@@ -24,4 +35,4 @@
     </ol>
 </div>
 
-@endsection
+@stop

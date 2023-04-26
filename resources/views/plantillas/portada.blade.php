@@ -25,7 +25,7 @@
     <!--Barra de Navegación-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-light">
         <div class="container-fluid">
-            <a id="1" class="navbar-brand fw-bold text-danger" href="/">Lynk Camel</a>
+            <a id="1" class="navbar-brand fw-bold text-danger" style="font-size: 25px;" href="/">Lynk Camel</a>
             <!--Toggler Button Responsive-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -33,16 +33,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active text-dark fw-bold" href="/conocenos">Conócenos</a>
+                        <a class="nav-link active text-dark fw-bold" style="font-size: 20px;" href="/conocenos">Conócenos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-dark fw-bold" href="/conocenos">Empleos</a>
+                        <a class="nav-link active text-dark fw-bold" style="font-size: 20px;" href="/empleos">Empleos</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark fw-bold " style="font-size: 20px;" href="/">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-dark fw-bold " href="/">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-dark fw-bold" href="/">Registro</a>
+                        <a class="nav-link active text-dark fw-bold" style="font-size: 20px;" href="/">Registro</a>
                     </li>
                 </ul>
             </div>

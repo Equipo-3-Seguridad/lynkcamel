@@ -18,23 +18,23 @@ Route::get('/', function () {
 });
 
 Route::get('/conocenos', function () {
-    return view('inicio.misionvision');
+    return view('legal.misionvision');
 });
 
 Route::get('/empleos', function () {
-    return view('inicio.misionvision');
+    return view('empleos.index');
 });
 
 Route::get('/politica-privacidad', function () {
-    return view('inicio.pprivacidad');
+    return view('legal.pprivacidad');
 });
 
 Route::get('/politica-uso', function () {
-    return view('inicio.puso');
+    return view('legal.puso');
 });
 
 Route::get('/aviso-privacidad', function () {
-    return view('inicio.aprivacidad');
+    return view('legal.aprivacidad');
 });
 
 Route::get('/error-400', function () {
@@ -47,4 +47,10 @@ Route::get('/error-404', function () {
 
 Route::get('/error-500', function () {
     abort(500, 'Internal server error');
-}); 
+});
+
+Route::resource('/empleos', 'App\Http\Controllers\empleosController');
+
+//Login y registro auth
+Route::post('/auth/register', [AuthController::class, 'createUser']);
+Route::post('/auth/login', [AuthController::class, 'loginUser']);

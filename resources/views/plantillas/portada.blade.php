@@ -16,6 +16,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <!--Contenido css y demás...-->
+    @yield('contenidoStyles')
 </head>
 <body class="bg-light">
     <!--Barra de Navegación-->
@@ -30,6 +32,9 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active text-dark fw-bold" href="/conocenos">Conócenos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark fw-bold" href="/conocenos">Empleos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active text-dark fw-bold " href="/">Login</a>
@@ -58,26 +63,27 @@
         <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted"><i class="fas fa-home"></i> Inicio</a></li>
             <li class="nav-item mb-2"><a href="/conocenos" class="nav-link p-0 text-muted"><i class="fa-regular fa-handshake"></i> Conócenos</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><i class="fas fa-pencil"></i> Registro</a></li>
+            <li class="nav-item mb-2"><a href="/conocenos" class="nav-link p-0 text-muted"><i class="fa-solid fa-briefcase" style="color: #616161;"></i> Empleos</a></li>
+            <li class="nav-item mb-2"><a href="/login" class="nav-link p-0 text-muted"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+            <li class="nav-item mb-2"><a href="/registro" class="nav-link p-0 text-muted"><i class="fas fa-pencil"></i> Registro</a></li>
         </ul>
         </div>
 
         <div class="col mb-3">
         <h5 class="fw-bold">Redes Sociales</h5>
         <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+            <li class="nav-item mb-2"><a href="https://www.facebook.com" class="nav-link p-0 text-muted"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+            <li class="nav-item mb-2"><a href="https://www.twitter.com" class="nav-link p-0 text-muted"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+            <li class="nav-item mb-2"><a href="https://www.instagram.com" class="nav-link p-0 text-muted"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
         </ul>
         </div>
 
         <div class="col mb-3">
         <h5 class="fw-bold">Marco Legal</h5>
         <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><i class="fas fa-shield"></i> Políticas de Privacidad</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><i class="fas fa-pencil"></i> Políticas de Uso</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><i class="fas fa-pencil"></i> Aviso de Privacidad</a></li>
+            <li class="nav-item mb-2"><a href="/politica-privacidad" class="nav-link p-0 text-muted"><i class="fas fa-shield"></i> Políticas de Privacidad</a></li>
+            <li class="nav-item mb-2"><a href="/politica-uso" class="nav-link p-0 text-muted"><i class="fas fa-pencil"></i> Políticas de Uso</a></li>
+            <li class="nav-item mb-2"><a href="/aviso-privacidad" class="nav-link p-0 text-muted"><i class="fas fa-pencil"></i> Aviso de Privacidad</a></li>
         </ul>
         </div>
 
@@ -85,11 +91,14 @@
         <h5 class="fw-bold">Contáctanos</h5>
         <ul class="nav flex-column">
             <li class="nav-item mb-2"><i class="fa-solid fa-envelope" style="color: #5b5b5b;"></i> 20191134@uthh.edu.mx</li>
+            <li class="nav-item mb-2"><i class="fa-solid fa-envelope" style="color: #5b5b5b;"></i> 20191202@uthh.edu.mx</li>
         </ul>
         </div>
     </footer>
 
     <!--Js Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!--Contenido JS-->
+    @yield('contenidoJs')
 </body>
 </html>

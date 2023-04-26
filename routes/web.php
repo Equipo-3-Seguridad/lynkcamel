@@ -20,3 +20,19 @@ Route::get('/', function () {
 Route::get('/conocenos', function () {
     return view('inicio.misionvision');
 });
+
+Route::get('/empleos', function () {
+    return view('inicio.misionvision');
+});
+
+Route::get('/politica-privacidad', function () {
+    return view('inicio.pprivacidad');
+});
+
+Route::get('/politica-uso', function () {
+    return view('inicio.puso');
+});
+
+Route::get('/aviso-privacidad', function () {
+    return view('inicio.aprivacidad');
+});

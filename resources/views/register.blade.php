@@ -13,7 +13,7 @@
 <h3 class="fw-bold text-dark" style="text-align: center;">Registro</h3>
 <br>
 <div class="container bg-secondary rounded-3 align-center p-3" style="width: 400px; margin-bottom: 15%;">
-    <form method="post" action="{{ route('validar-registro') }}">
+    <form action="{{ route('validar-registro') }}" method="post">
         @csrf
         <br>
         <div class="mb-3">

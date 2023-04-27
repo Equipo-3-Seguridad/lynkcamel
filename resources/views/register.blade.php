@@ -32,17 +32,17 @@
             <label class="form-label fw-bold mx-1" for="">Sexo</label><br>
             <div class="btn-group" data-toggle="buttons">
                 <label class="btn btn-secondary">
-                    <input type="radio" name="options" id="option1" autocomplete="off"> Masculino
+                    <input type="radio" name="gender" id="option1" value="M" autocomplete="off"> Masculino
                 </label>
                 <label class="btn btn-secondary">
-                    <input type="radio" name="options" id="option2" autocomplete="off"> Femenino
+                    <input type="radio" name="gender" id="option2" value="F" autocomplete="off"> Femenino
                 </label>
             </div>
         </div>
         <div class="mb-3">
             <label class="form-label fw-bold mx-1" for="">Rol</label><br>
             <div class="form-group">
-                <select class="form-control bg-secondary border-light text-light" id="user-role" name="user-role">
+                <select class="form-control bg-secondary border-light text-light" id="role" name="role">
                     <option value="default">Elige tu Usuario</option>
                     <option value="empleado">Empleado</option>
                     <option value="empleador">Empleador</option>

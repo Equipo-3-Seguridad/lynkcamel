@@ -12,8 +12,12 @@ class LoginController extends Controller
     public function register(Request $request){
         //validar los datos
         $user = new User();
-        $user->name = $request->name;
-        $user->email = $request->email;
+        $user->name = $request->get('name');
+        $user->lastname = $request->get('lastname');
+        $user->birth = $request->get('birth');
+        $user->gender = $request->get('gender');
+        $user->role = $request->get('role');
+        $user->email = $request->get('email');
         //cifrando contraseña
         $user->password = Hash::make($request->password);
         $user->save();

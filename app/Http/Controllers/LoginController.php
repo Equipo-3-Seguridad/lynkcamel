@@ -22,21 +22,31 @@ class LoginController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
         Auth::login($user);
-        return redirect(route('privada'));
+        if($user->role=="Empleador"){
+            return redirect(route('empleador'));
+        }
+        return redirect(route('empleado'));
     }
 
     public function login(Request $request){
         //Validación
         $credentials = [
-            "email" => $request->email,
-            "password" => $request->password,
+            "role" => $request->get('role'),
+            "email" => $request->get('email'),
+            "password" => $request->get('password')
             //"active" => true
         ];
 
         $remember = ($request->has('remember') ? true:false);
+
         if(Auth::attempt($credentials, $remember)){
             $request->session()->regenerate();
-            return redirect()->intended('privada');
+            //dependiendo del rol
+            if($credentials["role"]=='Empleado'){
+                return redirect()->intended('empleado');
+            }else if($credentials["role"]=='Empleador'){
+                return redirect()->intended('empleador');
+            }
         }else{
             return redirect('login');
         }

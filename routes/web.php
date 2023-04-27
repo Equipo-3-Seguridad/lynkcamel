@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\BacklogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,12 +54,21 @@ Route::get('/error-500', function () {
 Route::resource('/empleos', 'App\Http\Controllers\empleosController');
 
 Route::view('/login', "login")->name('login');
+Route::view('/backlog', "backlog")->name('backlog');
 Route::view('/registro', "register")->name('registro');
 //Ruta sin protección
 /*Route::view('/privada', "secret")->name('privada');*/
 //Ruta con protección
-Route::view('/privada', "secret")->middleware('auth')->name('privada');
+Route::view('/empleado', "empleado.index")->middleware('auth')->name('empleado');
+
+Route::view('/empleador', "empleador.index")->middleware('auth')->name('empleador');
+
+Route::view('/administrador', "administrador.index")->middleware('auth')->name('administrador');
 
 Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
+
 Route::post('/inicia-sesion', [LoginController::class, 'login'])->name('inicia-sesion');
+
+Route::post('/inicia-back', [BacklogController::class, 'login'])->name('inicia-back');
+
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

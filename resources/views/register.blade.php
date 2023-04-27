@@ -44,8 +44,8 @@
             <div class="form-group">
                 <select class="form-control bg-secondary border-light text-light" id="role" name="role">
                     <option value="default">Elige tu Usuario</option>
-                    <option value="empleado">Empleado</option>
-                    <option value="empleador">Empleador</option>
+                    <option value="Empleado">Empleado</option>
+                    <option value="Empleador">Empleador</option>
                 </select>
             </div>
         </div>

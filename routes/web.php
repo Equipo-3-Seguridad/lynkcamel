@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,13 @@ Route::get('/error-500', function () {
 
 Route::resource('/empleos', 'App\Http\Controllers\empleosController');
 
-//Login y registro auth
-Route::post('/auth/register', [AuthController::class, 'createUser']);
-Route::post('/auth/login', [AuthController::class, 'loginUser']);
+Route::view('/login', "login")->name('login');
+Route::view('/registro', "register")->name('registro');
+//Ruta sin protección
+/*Route::view('/privada', "secret")->name('privada');*/
+//Ruta con protección
+Route::view('/privada', "secret")->middleware('auth')->name('privada');
+
+Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
+Route::post('/inicia-sesion', [LoginController::class, 'login'])->name('inicia-sesion');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

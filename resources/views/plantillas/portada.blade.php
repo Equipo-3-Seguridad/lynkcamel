@@ -41,10 +41,10 @@
                 </ul>
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active text-dark fw-bold " style="font-size: 20px;" href="/">Login</a>
+                        <a class="nav-link active text-dark fw-bold " style="font-size: 20px;" href="/login">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-dark fw-bold" style="font-size: 20px;" href="/">Registro</a>
+                        <a class="nav-link active text-dark fw-bold" style="font-size: 20px;" href="/registro">Registro</a>
                     </li>
                 </ul>
             </div>
@@ -69,7 +69,7 @@
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted"><i class="fas fa-home"></i> Inicio</a></li>
                 <li class="nav-item mb-2"><a href="/conocenos" class="nav-link p-0 text-muted"><i class="fa-regular fa-handshake"></i> Conócenos</a></li>
-                <li class="nav-item mb-2"><a href="/conocenos" class="nav-link p-0 text-muted"><i class="fa-solid fa-briefcase" style="color: #616161;"></i> Empleos</a></li>
+                <li class="nav-item mb-2"><a href="/empleos" class="nav-link p-0 text-muted"><i class="fa-solid fa-briefcase" style="color: #616161;"></i> Empleos</a></li>
                 <li class="nav-item mb-2"><a href="/login" class="nav-link p-0 text-muted"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
                 <li class="nav-item mb-2"><a href="/registro" class="nav-link p-0 text-muted"><i class="fas fa-pencil"></i> Registro</a></li>
             </ul>

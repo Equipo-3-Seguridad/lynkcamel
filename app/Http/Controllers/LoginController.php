@@ -43,9 +43,9 @@ class LoginController extends Controller
             $request->session()->regenerate();
             //dependiendo del rol
             if($credentials["role"]=='Empleado'){
-                return redirect()->intended('empleado');
+                return redirect()->intended('/empleado/inicio');
             }else if($credentials["role"]=='Empleador'){
-                return redirect()->intended('empleador');
+                return redirect()->intended('/empleador/inicio');
             }
         }else{
             return redirect('login');

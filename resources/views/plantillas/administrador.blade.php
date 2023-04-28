@@ -47,7 +47,7 @@
                         <a class="nav-link active text-dark fw-bold" style="font-size: 20px;" href="">Tipo: @auth {{ Auth::user()->role }} @endauth</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-dark fw-bold" style="font-size: 20px;" href="{{ route('logout') }}">Cerrar Sesión</a>
+                        <a class="nav-link active text-dark fw-bold" style="font-size: 20px;" href="{{ route('logout-back') }}">Cerrar Sesión</a>
                     </li>
                 </ul>
             </div>

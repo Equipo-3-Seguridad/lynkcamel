@@ -22,9 +22,16 @@ class BacklogController extends Controller
 
         if(Auth::attempt($credentials, $remember)){
             $request->session()->regenerate();
-            return redirect()->intended('administrador');
+            return redirect()->intended('/administrador/inicio');
         }else{
             return redirect('backlog');
         }
+    }
+
+    public function logout(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect(route('backlog'));
     }
 }

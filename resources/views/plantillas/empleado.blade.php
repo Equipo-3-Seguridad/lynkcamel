@@ -25,7 +25,7 @@
     <!--Barra de Navegación-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-light">
         <div class="container-fluid">
-            <a id="1" class="navbar-brand fw-bold text-danger" style="font-size: 25px;" href="/">Lynk Camel</a>
+            <a id="1" class="navbar-brand fw-bold text-danger" style="font-size: 25px;" href="/empleado/inicio">Lynk Camel</a>
             <!--Toggler Button Responsive-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -33,10 +33,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active text-dark fw-bold" style="font-size: 20px;" href="/conocenos">Conócenos</a>
+                        <a class="nav-link active text-dark fw-bold" style="font-size: 20px;" href="/empleado/conocenos">Conócenos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-dark fw-bold" style="font-size: 20px;" href="/empleos">Empleos</a>
+                        <a class="nav-link active text-dark fw-bold" style="font-size: 20px;" href="/empleado/empleos">Empleos</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
@@ -70,9 +70,9 @@
         <div class="col mb-3">
             <h5 class="fw-bold">Navegación</h5>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted"><i class="fas fa-home"></i> Inicio</a></li>
-                <li class="nav-item mb-2"><a href="/conocenos" class="nav-link p-0 text-muted"><i class="fa-regular fa-handshake"></i> Conócenos</a></li>
-                <li class="nav-item mb-2"><a href="/empleos" class="nav-link p-0 text-muted"><i class="fa-solid fa-briefcase" style="color: #616161;"></i> Empleos</a></li>
+                <li class="nav-item mb-2"><a href="/empleado/inicio" class="nav-link p-0 text-muted"><i class="fas fa-home"></i> Inicio</a></li>
+                <li class="nav-item mb-2"><a href="/empleado/conocenos" class="nav-link p-0 text-muted"><i class="fa-regular fa-handshake"></i> Conócenos</a></li>
+                <li class="nav-item mb-2"><a href="/empleado/empleos" class="nav-link p-0 text-muted"><i class="fa-solid fa-briefcase" style="color: #616161;"></i> Empleos</a></li>
                 <li class="nav-item mb-2"><a href="/login" class="nav-link p-0 text-muted"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
                 <li class="nav-item mb-2"><a href="/registro" class="nav-link p-0 text-muted"><i class="fas fa-pencil"></i> Registro</a></li>
             </ul>
@@ -90,9 +90,9 @@
         <div class="col mb-3">
             <h5 class="fw-bold">Marco Legal</h5>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="/politica-privacidad" class="nav-link p-0 text-muted"><i class="fas fa-shield"></i> Políticas de Privacidad</a></li>
-                <li class="nav-item mb-2"><a href="/politica-uso" class="nav-link p-0 text-muted"><i class="fas fa-pencil"></i> Políticas de Uso</a></li>
-                <li class="nav-item mb-2"><a href="/aviso-privacidad" class="nav-link p-0 text-muted"><i class="fas fa-pencil"></i> Aviso de Privacidad</a></li>
+                <li class="nav-item mb-2"><a href="/empleado/politica-privacidad" class="nav-link p-0 text-muted"><i class="fas fa-shield"></i> Políticas de Privacidad</a></li>
+                <li class="nav-item mb-2"><a href="/empleado/politica-uso" class="nav-link p-0 text-muted"><i class="fas fa-pencil"></i> Políticas de Uso</a></li>
+                <li class="nav-item mb-2"><a href="/empleado/aviso-privacidad" class="nav-link p-0 text-muted"><i class="fas fa-pencil"></i> Aviso de Privacidad</a></li>
             </ul>
         </div>
 

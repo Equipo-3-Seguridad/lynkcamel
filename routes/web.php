@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BacklogController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,11 +61,11 @@ Route::view('/registro', "register")->name('registro');
 //Ruta sin protección
 /*Route::view('/privada', "secret")->name('privada');*/
 //Ruta con protección
-Route::view('/empleado/inicio', "empleado.index")->middleware(['auth','empleado'])->name('empleado');
+Route::view('/empleado/inicio', "empleado.index")->middleware(['auth', 'empleado'])->name('empleado');
 
-Route::view('/empleador/inicio', "empleador.index")->middleware(['auth','empleador'])->name('empleador');
+Route::view('/empleador/inicio', "empleador.index")->middleware(['auth', 'empleador'])->name('empleador');
 
-Route::view('/administrador/inicio', "administrador.index")->middleware(['auth','administrador'])->name('administrador');
+Route::view('/administrador/inicio', "administrador.index")->middleware(['auth', 'administrador'])->name('administrador');
 
 Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
 
@@ -74,3 +76,8 @@ Route::post('/inicia-back', [BacklogController::class, 'login'])->name('inicia-b
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/logout-back', [BacklogController::class, 'logout'])->name('logout-back');
+
+//Verificando el correo
+
+
+

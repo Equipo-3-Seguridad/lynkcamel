@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('lastname', 30);
             $table->date('birth');
             $table->enum('gender', ['M', 'F']);
-            $table->string('role');
+            $table->string('role', 12);
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

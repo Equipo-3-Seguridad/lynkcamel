@@ -18,18 +18,30 @@
         <br>
         <div class="mb-3">
             <label class="form-label fw-bold mx-1" for="">Nombre</label>
-            <input id="nameInput" name="name" class="form-control" type="text" required autocomplete="disable">
+            <input id="name" name="name" class="form-control" type="text">
+            @error('name')
+            <br>
+            <small style="color: white; font-weight: bold;">{{$message}}</small>
+            @enderror
         </div>
         <div class="mb-3">
             <label class="form-label fw-bold mx-1" for="">Apellido</label>
-            <input id="lastnameInput" name="lastname" class="form-control" type="text" required autocomplete="disable">
+            <input id="lastname" name="lastname" class="form-control" type="text">
+            @error('lastname')
+            <br>
+            <small style="color: white; font-weight: bold;">{{$message}}</small>
+            @enderror
         </div>
         <div class="mb-3">
             <label class="form-label fw-bold mx-1" for="">Fecha de Nacimiento</label><br>
             <input class="form-control" type="date" name="birth" value="dd/mm/yyyy">
+            @error('birth')
+            <br>
+            <small style="color: white; font-weight: bold;">{{$message}}</small>
+            @enderror
         </div>
         <div class="mb-3">
-            <label class="form-label fw-bold mx-1" for="">Sexo</label><br>
+            <label class="form-label fw-bold mx-1" for="">Genero</label><br>
             <div class="btn-group" data-toggle="buttons">
                 <label class="btn btn-secondary">
                     <input type="radio" name="gender" id="option1" value="M" autocomplete="off"> Masculino
@@ -37,29 +49,49 @@
                 <label class="btn btn-secondary">
                     <input type="radio" name="gender" id="option2" value="F" autocomplete="off"> Femenino
                 </label>
+                @error('gender')
+                <br>
+                <small style="color: white; font-weight: bold;">{{$message}}</small>
+                @enderror
             </div>
         </div>
         <div class="mb-3">
             <label class="form-label fw-bold mx-1" for="">Rol</label><br>
             <div class="form-group">
                 <select class="form-control bg-secondary border-light text-light" id="role" name="role">
-                    <option value="default">Elige tu Usuario</option>
+                    <option value="">Elige tu Usuario</option>
                     <option value="Empleado">Empleado</option>
                     <option value="Empleador">Empleador</option>
                 </select>
+                @error('role')
+                <br>
+                <small style="color: white; font-weight: bold;">{{$message}}</small>
+                @enderror
             </div>
         </div>
         <div class="mb-3">
             <label class="form-label fw-bold" for="emailInput">Correo</label>
-            <input id="emailInput" name="email" type="email" class="form-control" required autocomplete="disable">
+            <input id="emailInput" name="email" type="email" class="form-control">
+            @error('email')
+            <br>
+            <small style="color: white; font-weight: bold;">{{$message}}</small>
+            @enderror
         </div>
         <div class="mb-3">
             <label class="form-label fw-bold" for="passwordInput">Contraseña</label>
-            <input id="passwordInput" name="password" class="form-control" type="password" required>
+            <input id="passwordInput" name="password" class="form-control" type="password">
+            @error('password')
+            <br>
+            <small style="color: white; font-weight: bold;">{{$message}}</small>
+            @enderror
         </div>
         <div class="mb-3">
             <label class="form-label fw-bold" for="passwordInput">Comprueba tu Contraseña</label>
-            <input id="passwordInput" name="password2" class="form-control" type="password" required>
+            <input id="passwordInput" name="password2" class="form-control" type="password">
+            @error('password2')
+            <br>
+            <small style="color: white; font-weight: bold;">{{$message}}</small>
+            @enderror
         </div>
         <div class="">
             <button class="btn btn-success" type="submit">Registrarse</button>
@@ -68,4 +100,8 @@
         <br>
     </form>
 </div>
+@stop
+
+@section('contenidoJs')
+
 @stop

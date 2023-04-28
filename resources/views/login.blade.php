@@ -14,19 +14,31 @@
             <label class="form-label fw-bold mx-1" for="">Rol</label><br>
             <div class="form-group">
                 <select class="form-control bg-secondary border-light text-light" id="role" name="role">
-                    <option value="default">Elige tu rol</option>
+                    <option value="">Elige tu rol</option>
                     <option value="Empleado">Empleado</option>
                     <option value="Empleador">Empleador</option>
                 </select>
+                @error('role')
+                <br>
+                <small style="color: white; font-weight: bold;">{{$message}}</small>
+                @enderror
             </div>
         </div>
         <div class="mb-3">
             <label class="form-label fw-bold" for="emailInput">Correo</label>
-            <input id="emailInput" name="email" class="form-control" type="email" required>
+            <input id="emailInput" name="email" class="form-control" type="email">
+            @error('email')
+            <br>
+            <small style="color: white; font-weight: bold;">{{$message}}</small>
+            @enderror
         </div>
         <div class="mb-3">
             <label class="form-label fw-bold" for="passwordInput">Contraseña</label>
-            <input id="passwordInput" name="password" class="form-control" type="password" required>
+            <input id="passwordInput" name="password" class="form-control" type="password">
+            @error('password')
+            <br>
+            <small style="color: white; font-weight: bold;">{{$message}}</small>
+            @enderror
         </div>
         <div class="mb-3 form-check">
             <input id="rememberCheck" class="form-check-input" name="remember" type="checkbox">

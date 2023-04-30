@@ -16,6 +16,9 @@ use Illuminate\Http\Request;
 | contains the "web" middleware group. Now create something great!
 |
 */
+route::get('/dashboard', function () {
+    return view (view: 'dashboard');
+})->middleware(['auth', 'verified'])->name(name: 'dashboard');
 
 Route::get('/', function () {
     return view('inicio.index');

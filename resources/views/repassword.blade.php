@@ -12,6 +12,7 @@
         @csrf
         <div class="mb-3">
             <label class="form-label fw-bold" for="emailInput">Correo Electronico</label>
+            <p> Ingresa tu correo electronico y enviaremos información para restablecer su contraseña </p>
             <input id="emailInput" name="email" class="form-control" type="email">
             @error('email')
             <br>

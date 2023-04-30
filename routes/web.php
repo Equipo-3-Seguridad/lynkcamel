@@ -20,6 +20,9 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     return view('inicio.index');
 });
+Route::get('/recuperacion-password', function () {
+    return view('repassword.repassword');
+});
 
 Route::get('/conocenos', function () {
     return view('legal.misionvision');
@@ -57,6 +60,7 @@ Route::resource('/empleos', 'App\Http\Controllers\empleosController');
 Route::view('/login', "login")->name('login');
 Route::view('/backlog', "backlog")->name('backlog');
 Route::view('/registro', "register")->name('registro');
+Route::view('/recuperacion', "repassword")->name('recuperacion');
 //Ruta sin protección
 /*Route::view('/privada', "secret")->name('privada');*/
 //Rutas correspondientes a cada usuario
